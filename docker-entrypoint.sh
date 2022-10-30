@@ -65,7 +65,7 @@ case $INPUT_DEPLOYMENT_MODE in
 
   *)
     INPUT_DEPLOYMENT_MODE="docker-compose"
-    DEPLOYMENT_COMMAND="sudo docker compose down -f $STACK_FILE && sudo docker compose $DEPLOYMENT_COMMAND_OPTIONS -f $STACK_FILE"
+    DEPLOYMENT_COMMAND="sudo docker compose -f $STACK_FILE down && sudo docker compose $DEPLOYMENT_COMMAND_OPTIONS -f $STACK_FILE"
   ;;
 esac
 
